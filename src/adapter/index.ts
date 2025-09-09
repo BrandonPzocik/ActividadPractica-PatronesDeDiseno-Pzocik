@@ -12,7 +12,7 @@ interface Todo {
 const URL = "https://jsonplaceholder.typicode.com/todos/1";
 
 export async function runAdapter() {
-  console.log("=== ADAPTER: Fetch ↔ Axios ===");
+  console.log("-- Adapter --");
 
   //FetchAdapter
   const fetchClient = new SimpleHttpClient(new FetchAdapter());
