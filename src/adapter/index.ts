@@ -16,11 +16,11 @@ export async function runAdapter() {
 
   //FetchAdapter
   const fetchClient = new SimpleHttpClient(new FetchAdapter());
-  const todoWithFetch = await fetchClient.get<Todo>(URL);
-  console.log("Con fetch:", todoWithFetch);
+  const conFetch = await fetchClient.get<Todo>(URL);
+  console.log("Con fetch:", conFetch);
 
   // Cambiamos a AxiosAdapter
   fetchClient.setClient(new AxiosAdapter());
-  const todoWithAxios = await fetchClient.get<Todo>(URL);
-  console.log("Con axios:", todoWithAxios);
+  const conAxios = await fetchClient.get<Todo>(URL);
+  console.log("Con axios:", conAxios);
 }
